@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+       
+        <meta charset="utf-8">
+            <script type = "text/javascript">
+                function computerPlay()
+                {
+                 num = Number(Math.floor(Math.random()*3)+1);
+                 if(num == 1){
+                 action = "rock"
+            
+                 }else if(num == 2){
+                 action = "paper"
+            
+                 }else{
+                 action ="scissors"
+            
+                 }
+                
+                }
+                function playerPlay(){
+
+                   do { playerChoice = prompt("Choose Rock, Paper, or Scissors").toLowerCase()}
+                   while((playerChoice == "rock"||playerChoice =="paper"||playerChoice||"scissors"))
+                                      
+                }
+                function round(playerChoice,action){
+                    if(playerChoice == "rock" && action == "rock"){
+                        return "Tie";
+                    }else if(playerChoice == "rock" && action == "paper"){
+                        return "You Lose";
+                    }else if(playerChoice == "rock" && action == "scissors"){
+                        return "You Win";
+                    }else if(playerChoice == "paper" && action == "paper"){
+                        return "You Tied";
+                    }else if(playerChoice == "paper" && action == "rock"){
+                        return "You Win";
+                    }else if(playerChoice == "paper" && action == "scissors"){
+                        return "You Lose";
+                    }else if(playerChoice == "scissors" && action == "paper"){
+                        return "You Wins";
+                    }else if(playerChoice == "scissors" && action == "rock"){
+                        return "You Lose";
+                    }else if(playerChoice == "scissors" && action == "scissors"){
+                        return"You Tied";
+                    }
+                    
+                }
+                function game(){
+                        for(i = 0;i<5;i++) {
+                            computerPlay();
+                            playerPlay();
+                            console.log(round(playerChoice,action));
+                           
+                            
+                        }
+                    }
+                
+                game();
+   
+    
+            </script>
+    </head>
